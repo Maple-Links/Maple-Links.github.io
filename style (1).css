@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Montserrat&display=swap');
+
+:root {
+	--color_dark: #051014;
+	--color_light: #F9FBF2;
+	--color_accent: #fff4e7;
+	--color_contrast: #fe3434;
+
+	--font_primary: 'Montserrat', sans-serif;
+	--font_secondary: 'Comfortaa', cursive;
+
+	--font_title: clamp(0.8rem, 4vw, 3rem);
+	--font_text: clamp(0.35rem, 1.5vw, 1.5rem);
+	--font_caption: clamp(0.2rem, 1vw, 1em);
+
+	--drop_shadow: drop-shadow(4px 4px 8px #3335);
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+html {
+	width: 100vw;
+	height: 100vh;
+}
+
+body {
+	background: var(--color_light);
+	color: var(--color_dark);
+
+	font-family: var(--font_primary);
+	font-size: var(--font_text);
+
+	text-align: center;
+
+	overflow-x: hidden;
+
+	filter: var(--drop_shadow);
+
+	margin: 0;
+}
+
+footer {
+	font-size: var(--font_caption);
+
+	width: 100%;
+
+	padding: 2em 0;
+}
+
+footer button {
+	font-size: var(--font_caption);
+}
+
+section {
+	display: flex;
+
+	flex-direction: row;
+
+	justify-content: center;
+	align-items: center;
+
+	height: 60vh;
+}
+
+button {
+	background: var(--color_light);
+	color: var(--color_dark);
+	
+	font-family: var(--font_primary);
+	font-size: var(--font_text);
+
+	margin: 0 0.25em;
+
+	border: none;
+	border-radius: 8px;
+
+	padding: 0.5em 2em;
+
+	transition: all 200ms;
+  
+  transition-duration: 0.4s;
+}
+
+button:hover {
+	transform: scale(1.1);
+  background-color: #fe2a2a; /* Red */
+  color: white;
+}
+
+button:active {
+	transform: scale(1.15);
+}
+
+form {
+	margin: 2em;
+}
+
+label {
+	font-size: var(--font_text);
+
+	margin: 0 1em;
+}
+
+input, textarea {
+	background: var(--color_light);
+	color: var(--color_dark);
+
+	font-size: var(--font_text);
+
+	border: none;
+	border-radius: 1em;
+
+	width: 30vw;
+	height: 2vh;
+
+	margin: 0.5em 0 1em 0;
+
+	padding: 1em 1em;
+
+	outline: none;
+
+	resize: none;
+
+	transition: all 200ms;
+}
+
+input#submit {
+	text-align: center;
+
+	width: 12vw;
+	height: 8vh;
+}
+
+input:hover, textarea:hover {
+	transform: scale(1.05);
+}
+
+input:focus, textarea:focus {
+	background: var(--color_contrast);
+	color: var(--color_light)
+}
+
+textarea {
+	width: 30vw;
+	height: 20vh;
+}
+
+h1 {
+	font-family: var(--font_secondary);
+	font-size: var(--font_title);
+
+	margin: 0 1em;
+}
+
+img {
+	height: min(40vh, 40vw);
+
+	margin: 1em;
+
+	border-radius: 1em;
+
+	transition: all 200ms;
+}
+
+img:hover {
+	transform: scale(1.05);
+}
+
+table {
+	width: 50vw;
+
+	margin: 0 auto;
+
+	border-spacing: 0;
+}
+
+th {
+	text-align: left;
+}
+
+td {
+	text-align: center;
+	
+	width: 20%;
+
+	margin: 0;
+}
+
+ul {
+	text-align: left;
+}
+
+.bar {
+	display: flex;
+
+	flex-direction: row;
+
+	justify-content: center;
+	align-items: center;
+
+	background: var(--color_contrast);
+
+	padding: 1em clamp(4em, 30vw, 30em);
+}
+
+.barTitle {
+	display: inline;
+
+	color: var(--color_light);
+
+	flex: 1 0;
+}
+
+.buttonGroup, .row {
+	display: flex;
+
+	flex: 0 1;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.column {
+	display: flex;
+
+	flex-direction: column;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.row {
+	display: flex;
+
+	flex-direction: row;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.buttonGroup button, .titleButton {
+	background: none;
+	color: var(--color_light);
+
+	padding: 0 1em;
+}
+
+.card {
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+
+	height: clamp(10em, 20%, 15em);
+	width: clamp(10em, 20%, 15em);
+
+	margin: 1em;
+
+	border-radius: 1em;
+
+	padding: 1em;
+
+	transition: all 200ms;
+}
+
+.card:hover {
+	transform: scale(1.05);
+}
+
+.card h3 {
+	margin: 0.1em;
+}
+
+.spacer {
+	margin: auto 0;
+
+	padding: 4em;
+}
+
+.selection {
+	display: flex;
+
+	flex-direction: row;
+	
+	width: 25vw;
+
+	margin: 0;
+}
+
+.selection input{
+	width: 20%;
+}
+
+.selection label {
+	width: 80%;
+}
+
+.inactive {
+	display: none;
+}
+
+.accent {
+	background: var(--color_accent);
+	color: var(--color_dark);
+}
+
+.contrast {
+	background: var(--color_contrast);
+	color: var(--color_light);
+}
+
+.light {
+	background: var(--color_light);
+	color: var(--color_dark);
+}
+
+.dark {
+	background: var(--color_dark);
+	color: var(--color_light);
+}
+
+.center {
+	text-align: center;
+}
